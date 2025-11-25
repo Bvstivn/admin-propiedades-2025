@@ -6,8 +6,16 @@
           <v-btn :to="{ name: 'home' }"> Bienes Raices - VueFire </v-btn>
         </template>
         <template v-slot:append>
-          <v-btn :to="{ name: 'home' }"> Inicio </v-btn>
-          <v-btn :to="{ name: 'login' }"> Iniciar Sesión </v-btn>
+          <div v-if="auth.isAuth">
+            <v-btn :to="{ name: 'admin-propiedades' }">
+              Administrar Propiedades
+            </v-btn>
+            <v-btn @click="auth.logout"> Cerrar Sesión </v-btn>
+          </div>
+          <div v-else>
+            <v-btn :to="{ name: 'home' }"> Inicio </v-btn>
+            <v-btn :to="{ name: 'login' }"> Iniciar Sesión </v-btn>
+          </div>
         </template>
       </v-app-bar>
       <v-main>
@@ -20,5 +28,10 @@
 </template>
 
 <script setup lang="ts">
+//VueRouter
 import { RouterLink, RouterView } from "vue-router";
+//Stores
+import { useAuthStore } from "./stores/auth";
+
+const auth = useAuthStore();
 </script>
