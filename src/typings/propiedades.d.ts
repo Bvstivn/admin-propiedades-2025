@@ -6,5 +6,5 @@ interface Propiedad extends Doc {
     precio: string;
     wc: number;
     alberca: boolean;
-    imagen: File | null;
+    imagen: string;
 }

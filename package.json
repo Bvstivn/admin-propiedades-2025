@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@vue-leaflet/vue-leaflet": "^0.10.1",
     "firebase": "^12.6.0",
+    "leaflet": "^1.9.4",
     "pinia": "^3.0.3",
     "uid": "^2.0.2",
     "vee-validate": "^4.15.1",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
+    "@types/leaflet": "^1.9.21",
     "@types/node": "^22.18.11",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
